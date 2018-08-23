@@ -1,21 +1,15 @@
 # mpvue-tpl
 
-> A Mpvue project
+> Mpvue 小程序模板
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
-npm install
+yarn
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# 启动服务，打开小程序调试工具
+npm start
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+文档请看[mpvue](http://mpvue.com/mpvue/).

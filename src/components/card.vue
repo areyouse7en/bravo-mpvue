@@ -8,12 +8,18 @@
 
 <script>
 export default {
-  props: ['text']
-}
+  props: ["text"]
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+$border: #999;
+
 .card {
-  padding: 10px;
+  padding: 10rpx;
+  border: 1rpx solid $border;
+  & + .card {
+    margin-left: 5rpx;
+  }
 }
 </style>
