@@ -2,8 +2,8 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
-// var MpvuePlugin = require('webpack-mpvue-asset-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
+const MpvuePlugin = require('webpack-mpvue-asset-plugin')
 const MpvueEntry = require('mpvue-entry')
 
 function resolve(dir) {
@@ -87,12 +87,12 @@ module.exports = {
     ]
   },
   plugins: [
-    // new MpvuePlugin(),
     new MpvueEntry(),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../static'),
       to: path.resolve(__dirname, '../dist/static'),
       ignore: ['.*']
-    }])
+    }]),
+    new MpvuePlugin()
   ]
 }

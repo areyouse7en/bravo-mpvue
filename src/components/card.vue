@@ -13,13 +13,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border: #999;
-
 .card {
-  padding: 10rpx;
-  border: 1rpx solid $border;
-  & + .card {
-    margin-left: 5rpx;
-  }
+  color: skyblue;
+  padding: 10px;
 }
 </style>
