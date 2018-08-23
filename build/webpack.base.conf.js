@@ -1,9 +1,9 @@
-const path = require('path')
-const utils = require('./utils')
-const config = require('../config')
-const vueLoaderConfig = require('./vue-loader.conf')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MpvuePlugin = require('webpack-mpvue-asset-plugin')
+var path = require('path')
+var utils = require('./utils')
+var config = require('../config')
+var vueLoaderConfig = require('./vue-loader.conf')
+// var MpvuePlugin = require('webpack-mpvue-asset-plugin')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 const MpvueEntry = require('mpvue-entry')
 
 function resolve(dir) {
@@ -11,6 +11,9 @@ function resolve(dir) {
 }
 
 module.exports = {
+  // 如果要自定义生成的 dist 目录里面的文件路径，
+  // 可以将 entry 写成 {'toPath': 'fromPath'} 的形式，
+  // toPath 为相对于 dist 的路径, 例：index/demo，则生成的文件地址为 dist/index/demo.js
   entry: MpvueEntry.getEntry('src/pages.js'),
   target: require('mpvue-webpack-target'),
   output: {
@@ -84,8 +87,8 @@ module.exports = {
     ]
   },
   plugins: [
+    // new MpvuePlugin(),
     new MpvueEntry(),
-    new MpvuePlugin(),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../static'),
       to: path.resolve(__dirname, '../dist/static'),

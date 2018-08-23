@@ -5,7 +5,7 @@ module.exports = {
   build: {
     env: require('./prod.env'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: '',
+    assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: false,
     // Gzip off by default as many popular static hosts such as
@@ -22,9 +22,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    // 在小程序开发者工具中不需要自动打开浏览器
-    autoOpenBrowser: false,
-    assetsSubDirectory: '',
+    assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README

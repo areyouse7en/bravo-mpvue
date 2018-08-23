@@ -15,7 +15,6 @@ export default {
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: '巧房',
       navigationBarTextStyle: 'black'
-    },
-    // tabBar: {}
+    }
   }
 }
