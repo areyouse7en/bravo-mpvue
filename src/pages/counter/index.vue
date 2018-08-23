@@ -10,22 +10,14 @@
 </template>
 
 <script>
-// Use Vuex
-import store from "./store";
+import { mapState, mapMutations } from "vuex";
 
 export default {
   computed: {
-    count() {
-      return store.state.count;
-    }
+    ...mapState(["count"])
   },
   methods: {
-    increment() {
-      store.commit("increment");
-    },
-    decrement() {
-      store.commit("decrement");
-    }
+    ...mapMutations(["increment", "decrement"])
   }
 };
 </script>
